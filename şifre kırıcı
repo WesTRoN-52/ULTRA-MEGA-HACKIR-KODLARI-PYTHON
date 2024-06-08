@@ -1,0 +1,27 @@
+from random import choice,choice, choices
+import time
+sayilar=(1,2,3,4,5,6,7,8,9,0)
+
+sifre= str (input("Kırılacak Şifreyi Giriniz :"))
+sifres=""
+adım=0
+baslangıczamanı=time.time()
+while True :
+    print(sifres,"Şifresi deneniyor...")
+    if sifre==sifres:
+        break
+    else:
+        sifres=""
+        for i in range (4):
+            sifres+=str(choice(sayilar))
+            adım+=1
+
+
+
+
+bitiszamani=time.time()
+gecenzaman=bitiszamani-baslangıczamanı
+print("\n\n\n\n Şifre başarıyla kırıldı..Şifreniz:",sifres,"/ Şifreniz,")
+print(adım,"Adımda,")
+print(gecenzaman,"Saniyede kırıldı...")
+
